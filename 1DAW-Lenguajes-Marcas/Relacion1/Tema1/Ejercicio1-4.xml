@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- ## Ejercicio 4: Crear un XML de recetas
+Crea un XML con **2 recetas** de cocina.  
+Cada receta debe incluir: `nombre`, `ingredientes` (lista de varios), y `tiempoPreparacion`. -->
 <recetas>
     <receta>
         <nombre>Arroz con Pollo</nombre>

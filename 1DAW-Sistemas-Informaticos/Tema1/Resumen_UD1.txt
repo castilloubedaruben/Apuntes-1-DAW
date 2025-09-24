@@ -1,0 +1,153 @@
+📘 Tema 1: Introducción a la terminal y comandos básicos en Linux
+🔹 El prompt (indicador de la terminal)
+
+El prompt es lo que ves en la terminal esperando tu orden.
+
+Ejemplo típico:
+
+usuario@maquina:/directorio/actual$
+
+
+$ → usuario normal
+
+# → superusuario (root, con más permisos, cuidado aquí).
+
+👉 Consejo: Si ves #, piénsalo dos veces antes de escribir un comando, porque podrías borrar o modificar cosas críticas.
+
+🔹 Comandos: qué son y cómo funcionan
+
+Un comando es una orden que das al sistema.
+
+Pueden ser:
+
+Internos (propios del shell, ej: cd, pwd).
+
+Externos (programas instalados, ej: ls, cp).
+
+Estructura general de un comando:
+comando [opciones] [argumentos]
+
+
+Comando → la orden (ls).
+
+Opciones → modifican cómo funciona (-l, -a).
+
+Argumentos → sobre qué actúa (/home/usuario).
+
+✅ Ejemplo:
+
+ls -l /home/usuario
+
+🔹 Navegación por el sistema de archivos
+
+Linux organiza todo en forma de árbol:
+
+/ → raíz (el inicio de todo).
+
+/home → carpetas de usuarios.
+
+/etc → configuraciones.
+
+/var → registros (logs) y datos variables.
+
+Rutas:
+
+Absoluta: empieza desde /.
+Ej: /home/usuario/documentos
+
+Relativa: depende de dónde estés.
+Ej: ../documentos
+
+Directorios especiales:
+
+. → directorio actual.
+
+.. → directorio padre.
+
+👉 Consejo: Antes de hacer algo, escribe pwd para confirmar dónde estás.
+
+🔹 Metacaracteres (comodines)
+
+* → cualquier número de caracteres. (*.txt)
+
+? → un solo carácter. (archivo?.log)
+
+[ ] → un rango (archivo[1-3].txt)
+
+{ } → lista (archivo{1,2}.txt)
+
+⚠️ Mucho cuidado con rm * → borra todo en la carpeta actual.
+
+🔹 Comandos básicos de navegación
+
+pwd → muestra en qué carpeta estás.
+
+cd → moverte entre carpetas.
+
+ls → ver archivos/carpetas.
+
+tree → ver estructura en forma de árbol.
+
+👉 Consejo: Usa ls -lh para ver tamaños de archivos de forma legible (MB/GB).
+
+🔹 Manipulación de archivos y carpetas
+
+cp → copiar archivos/carpetas.
+
+mv → mover o renombrar.
+
+rm → eliminar (⚠️ cuidado, no hay papelera).
+
+mkdir → crear carpetas.
+
+rmdir → borrar carpetas vacías.
+
+touch → crear archivos vacíos.
+
+👉 Consejo: si tienes miedo de borrar algo sin querer, añade la opción -i (ej: rm -i archivo.txt) para que te pregunte.
+
+🔹 Visualización y edición de archivos
+
+cat → muestra el contenido de un archivo.
+
+head → ver primeras líneas.
+
+tail → ver últimas líneas (tail -f para seguir un log en tiempo real).
+
+nano → editor de texto sencillo dentro de la terminal.
+
+👉 Atajos en nano:
+
+Guardar → Ctrl + O
+
+Salir → Ctrl + X
+
+🔹 Búsqueda de archivos y contenido
+
+find → busca archivos por nombre, tamaño, fecha, etc.
+Ej: find /home -name "*.txt"
+
+grep → busca texto dentro de archivos.
+Ej: grep "error" archivo.log
+
+👉 Consejo: grep -r "palabra" . busca en todos los archivos de la carpeta actual.
+
+
+📊 Tabla de comandos más usados
+Comando     Qué hace	                        Ejemplo
+pwd	    Muestra dónde estás.	            pwd → /home/usuario
+cd	    Cambia de carpeta.                  cd documentos/
+ls	    Lista archivos/carpetas.	        ls -l (detallado), ls -a (incluye ocultos)
+tree	Muestra estructura de árbol.	    tree ~/
+cp	    Copiar archivos o carpetas.	        cp archivo.txt /destino/
+mv	    Mover o renombrar.	                mv archivo.txt nuevo.txt
+rm	    Eliminar archivos.	                rm archivo.txt, rm -r carpeta/
+mkdir	Crear carpeta.	                    mkdir nueva_carpeta
+rmdir	Eliminar carpeta vacía.	            rmdir vacia/
+touch	Crear archivo vacío.	            touch notas.txt
+cat	    Mostrar contenido.	                cat archivo.txt
+head	Ver primeras líneas.	            head -n 20 archivo.txt
+tail	Ver últimas líneas.	                tail -f log.txt (en tiempo real)
+nano	Editar archivos.	                nano archivo.txt
+find	Buscar archivos.	                find /home -name "*.jpg"
+grep	Buscar texto en archivos.	        grep "error" archivo.log

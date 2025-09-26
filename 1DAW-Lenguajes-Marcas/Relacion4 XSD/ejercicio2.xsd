@@ -1,18 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="pedidos">
+    <xs:element name="pedido">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="pedido" type="xs:string">
+                <xs:element name="cliente" type="xs:string">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="cliente"></xs:element>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="email">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="xs:/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="telefono">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="\d{3}-\d{3}-\d{3}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-                <xs:element name="cliente" type="xs:string"/>
-                <xs:element name="email" ></xs:element>
+                <xs:element name="producto" type="xs:string">
+                    <xs:element name="nombre" type="xs:string"/>
+                    <xs:element name="precio" type="xs:decimal"/>
+                    <xs:element name="cantidad" type="xs:interger"/>
+                    </xs:element>
+                </xs:element>
             </xs:sequence>
+            <xs:attribute name="estado">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Pendiente"/>
+                        <xs:enumeration value="Entregado"/>
+                        <xs:enumeration value="Enviado"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="codigo">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="(A\d{3}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
 </xs:schema>
+
+

@@ -8,9 +8,8 @@
 
 let temperatura = Number(prompt("Indique una temperatura sin el simbolo º"))
 let muyFrio = temperatura < 0 
-let frio = temperatura >= 0 && temperatura <= 15
-let templado = temperatura >= 16 && temperatura <= 25
-let caliente = temperatura > 25
+let frio = temperatura <= 15
+let templado = temperatura <= 25
 
 if (muyFrio) {
     console.log("La temperatura " + temperatura + " es Muy fría")

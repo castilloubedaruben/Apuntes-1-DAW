@@ -1,14 +1,14 @@
 # **COMO USAR GIT DESDE 0**
 - [**COMO USAR GIT DESDE 0**](#como-usar-git-desde-0)
   - [**1. ¿QUE ES GIT?**](#1-que-es-git)
-  - [**1.1.Instalacion de GIT**](#11instalacion-de-git)
-  - [**1.2 Configuracion de GIT**](#12-configuracion-de-git)
+  - [*1.1.Instalacion de GIT*](#11instalacion-de-git)
+  - [*1.2 Configuracion de GIT*](#12-configuracion-de-git)
   - [**2.FUNDAMENTOS AVANZADOS DE GIT**](#2fundamentos-avanzados-de-git)
-    - [**2.1 REPOSITORIOS**](#21-repositorios)
-    - [2.2 Los archivos pasan por distintos estados:](#22-los-archivos-pasan-por-distintos-estados)
-    - [2.3 🌐 Conexión con GitHub](#23--conexión-con-github)
-    - [2.3 🌳 Trabajo con ramas](#23--trabajo-con-ramas)
-    - [2.4 Deshacer y guardar cambios](#24-deshacer-y-guardar-cambios)
+    - [*2.1 REPOSITORIOS*](#21-repositorios)
+    - [*2.2 Los archivos pasan por distintos estados:*](#22-los-archivos-pasan-por-distintos-estados)
+    - [*2.3 🌐 Conexión con GitHub*](#23--conexión-con-github)
+    - [*2.3 🌳 Trabajo con ramas*](#23--trabajo-con-ramas)
+    - [*2.4 Deshacer y guardar cambios*](#24-deshacer-y-guardar-cambios)
 
 
 ## **1. ¿QUE ES GIT?**
@@ -18,7 +18,7 @@ Favorece la colaboración entre varios desarrolladores, permitiendo unir cambios
 Además, registra quién hizo cada modificación y cuándo, lo que ayuda a revisar el trabajo.
 Con las ramas, se pueden probar ideas nuevas sin afectar el proyecto principal.
 
-## **1.1.Instalacion de GIT**
+## *1.1.Instalacion de GIT*
 Git es compatible tanto en Linux,macOS y Windows. 
  - **Instalación en Linux**
 
@@ -32,7 +32,7 @@ La forma mas sencilla desde el propio instalador de paquetes en terminal:
 
 Descargar desde la pagina de GIT [página oficial de Git](https://git-scm.com/download/win).
 
-## **1.2 Configuracion de GIT**
+## *1.2 Configuracion de GIT*
 
 Los dos parametros básicos son **nombre** y **correo electronico**
 ```bash
@@ -50,7 +50,7 @@ Si aparece nº de version esta todo correcto.
 
 ## **2.FUNDAMENTOS AVANZADOS DE GIT**
 
-### **2.1 REPOSITORIOS** 
+### *2.1 REPOSITORIOS*
 
 Un repositorio en Git es donde se guardan los archivos y todo su historial de cambios.
 
@@ -69,7 +69,7 @@ git clone https://github.com/usuario/repo.git
 El repositorio remoto está en un servidor (como GitHub) y sirve para colaborar con otros.
 Ambos se conectan para sincronizar y mantener el proyecto actualizado entre todos los desarrolladores.
 
-### 2.2 Los archivos pasan por distintos estados:
+### *2.2 Los archivos pasan por distintos estados:*
 
 * Untracked: Git no los sigue aún.
 
@@ -79,7 +79,7 @@ Ambos se conectan para sincronizar y mantener el proyecto actualizado entre todo
 
 * Committed: Guardados en el historial
 
-### 2.3 🌐 Conexión con GitHub
+### *2.3 🌐 Conexión con GitHub*
 
 Subir cambios: 
 ```bash
@@ -95,7 +95,7 @@ Clonar repositorio:
 git clone URL.
 ```
 
-### 2.3 🌳 Trabajo con ramas
+### *2.3 🌳 Trabajo con ramas*
 
 Crear nueva rama: 
 
@@ -119,7 +119,7 @@ Fusiona una rama con la actual.
 ```bash
 git merge nombre_rama 
 ```
-### 2.4 Deshacer y guardar cambios
+### *2.4 Deshacer y guardar cambios*
 
 → Quita el último commit pero guarda cambios.
 ```bash

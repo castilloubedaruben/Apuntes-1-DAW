@@ -14,7 +14,10 @@
     const SOBREPESO = IMC >= 25 && IMC < 29.9
     const OBESIDAD = IMC >= 30
     mensaje = ""
-
+    
+    if ((pesoUsuario < 0) || (alturaUsuario < 0)){
+        mensaje = "Indique parametros correctos"
+    } else {
     if (BAJOPESO) {
         mensaje = "Su IMC es de " + IMC + " , está en bajo peso."
     } else if (NORMAL) {
@@ -24,6 +27,7 @@
     } else {
         mensaje = "Su IMC es de " + IMC + " , está en obesidad."
     } 
+}
     console.log(mensaje) 
 
 </script>

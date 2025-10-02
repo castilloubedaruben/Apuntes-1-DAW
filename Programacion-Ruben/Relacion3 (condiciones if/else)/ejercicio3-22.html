@@ -12,7 +12,8 @@
     const PAPEL = "papel"
     let mensaje = ""
 
-    if (((jugador1 || jugador2) != PIEDRA) || ((jugador1 || jugador2) != TIJERA) || ((jugador1 || jugador2) != PAPEL)) {
+    if (jugador1 != PIEDRA || jugador1 != TIJERA || jugador1 != PAPEL) 
+    if (jugador2 != PIEDRA || jugador2 != TIJERA || jugador2 != PAPEL) { // Esto no es correcto!! Mirar ejemplo del profesor
         mensaje = ("Elige entre Piedra, Papel o Tijera")
     } else {
         if (jugador1 == jugador2) {
@@ -24,6 +25,5 @@
         }
     }
     console.log(mensaje)
-
 
 </script>

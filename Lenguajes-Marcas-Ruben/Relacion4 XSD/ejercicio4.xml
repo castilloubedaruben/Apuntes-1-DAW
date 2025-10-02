@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Ejercicio 4 – Alumnos y Notas
-Diseña desde cero un XML y su XSD para un sistema escolar con estas características:
-
-El documento tiene un elemento raíz clase.
-La clase contiene varios alumno.
-Cada alumno tiene:
-nombre (cadena que debe empezar con mayúscula, regex).
-edad (entero entre 6 y 18).
-Una lista de nota (decimal entre 0 y 10, puede haber entre 1 y 5 notas).
-Un dni que siga el formato 8 dígitos + 1 letra (regex).
-El alumno debe tener un atributo id único (entero positivo).
-👉 Tu tarea:
-
-Define el XSD.
-Escribe un XML con al menos 2 alumnos y sus notas. -->
-
-<clase>
+<clase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio4.xsd">
     <alumno id="1">
         <nombre>Ruben</nombre>
         <edad>18</edad>
@@ -37,3 +21,19 @@ Escribe un XML con al menos 2 alumnos y sus notas. -->
         </notas>
     </alumno>
 </clase>
+
+<!-- Ejercicio 4 – Alumnos y Notas
+Diseña desde cero un XML y su XSD para un sistema escolar con estas características:
+
+El documento tiene un elemento raíz clase.
+La clase contiene varios alumno.
+Cada alumno tiene:
+nombre (cadena que debe empezar con mayúscula, regex).
+edad (entero entre 6 y 18).
+Una lista de nota (decimal entre 0 y 10, puede haber entre 1 y 5 notas).
+Un dni que siga el formato 8 dígitos + 1 letra (regex).
+El alumno debe tener un atributo id único (entero positivo).
+👉 Tu tarea:
+
+Define el XSD.
+Escribe un XML con al menos 2 alumnos y sus notas. -->

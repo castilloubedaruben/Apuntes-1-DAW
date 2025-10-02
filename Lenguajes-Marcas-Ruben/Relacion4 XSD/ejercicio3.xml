@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <calendario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio3.xsd">
-        <evento id= 1>
+        <evento id="1">
                 <titulo>Conferencia</titulo>
                 <fecha>2025-10-02</fecha>
                 <hora>08:00:00</hora>
                 <ubicacion>Clase 1 DAW</ubicacion>
                 <codigoPostal>18953</codigoPostal>
         </evento>
-        <evento id= 2>
+        <evento id="2">
                 <titulo>Concierto</titulo>
                 <fecha>2025-10-02</fecha>
                 <hora>20:30:00</hora>
                 <ubicacion>Estadio la Cartuja</ubicacion>
                 <codigoPostal>20563</codigoPostal>
         </evento>
-        <evento id= 3>
+        <evento id="3">
                 <titulo>Reunion de trabajo</titulo>
                 <fecha>2025-10-03</fecha>
                 <hora>10:30:00</hora>

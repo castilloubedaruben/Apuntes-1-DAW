@@ -1,7 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejercicio2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="ejercicio2.xsd">
+
 <!-- ## **Ejercicio 2 – Pedidos Online**
 Se te da el siguiente **XML** (no válido aún). Debes crear el **XSD** que valide su estructura:
 -->
-<?xml version="1.0" encoding="UTF-8"?>
 <pedidos>
     <pedido codigo="A101">
         <cliente>

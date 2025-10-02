@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Ejercicio 4 – Alumnos y Notas
 Diseña desde cero un XML y su XSD para un sistema escolar con estas características:
 
@@ -14,7 +15,6 @@ El alumno debe tener un atributo id único (entero positivo).
 Define el XSD.
 Escribe un XML con al menos 2 alumnos y sus notas. -->
 
-<?xml version="1.0" encoding="UTF-8"?>
 <clase>
     <alumno id="1">
         <nombre>Ruben</nombre>

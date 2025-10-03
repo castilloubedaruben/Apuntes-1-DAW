@@ -24,7 +24,7 @@
                             <xs:element name="dni">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
-                                        <xs:pattern value="(\d{8}[A-Z]|[XYZ]\d{7}[A-Z])"/>
+                                        <xs:pattern value="(\d{8}[A-Z])"/>
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
@@ -43,7 +43,7 @@
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
-                        <xs:attribute name="id" type="xs:positiveInteger"/>
+                        <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>

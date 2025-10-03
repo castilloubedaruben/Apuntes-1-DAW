@@ -1,0 +1,25 @@
+<!-- 1-Poner esto siempre al empezar el xsd -->
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>
+
+
+<!-- 2-Etiqueta para los elementos -->
+<xs:element name="poner aqui la raiz. ejemplo: clase">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="elementos que forman la raiz. ejemplo: alumno" maxOccurs="unbounded " cuando es indefinido"">
+                <xs:complextype>
+                    <xs:sequence>
+                        <xs:element name="elementos que lo conforman. ejemplo: de alumno, nombre, edad, dani, notas">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:se pone si es string,interger,decimal">
+                                    <xs:pattern value="suele ser un regex">
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complextype>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType:>
+</xs:element>

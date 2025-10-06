@@ -1,4 +1,5 @@
 <!-- 1-Poner esto siempre al empezar el xsd -->
+
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 </xs:schema>
@@ -15,11 +16,72 @@
                             <xs:simpleType>
                                 <xs:restriction base="xs:se pone si es string,interger,decimal">
                                     <xs:pattern value="suele ser un regex">
+                                </xs:restriction>
                             </xs:simpleType>
                         </xs:element>
                     </xs:sequence>
                 </xs:complextype>
             </xs:element>
         </xs:sequence>
-    </xs:complexType:>
+        <xs:attribute name="nombre del atributo" use="required">
+            <xs:simpleType>
+                <xs:restriction base="">
+                    <xs:pattern value=""/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
 </xs:element>
+
+<xs:maxLength value="100"/>
+
+
+REGEX:
+DNI español
+
+^\d{8}[A-Z]$
+
+Explicación:
+^	Inicio de la cadena (para que no haya nada antes)
+\d{8}	Exactamente 8 dígitos numéricos (\d = dígito, {8} = 8 repeticiones)
+[A-Z]	Una sola letra mayúscula (de la A a la Z)
+$	Final de la cadena (para que no haya nada después)
+
+
+Email
+
+^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$
+
+Explicación:
+^	Inicio de la cadena
+[A-Za-z0-9._%+-]+	Nombre del usuario (puede contener letras, números y símbolos ., _, %, +, -)
+@	El símbolo obligatorio que separa usuario y dominio
+[A-Za-z0-9.-]+	Parte del dominio (ej: gmail, hotmail, iesgranada, etc.)
+\.	Punto antes de la extensión
+[A-Za-z]{2,}	Extensión (mínimo 2 letras: es, com, org, etc.)
+$	Fin de la cadena
+
+TELEFONO
+^\d{3}-\d{3}-\d{3}$
+
+Explicación
+^	Inicio de la cadena
+\d{3}	Tres dígitos (0–9)
+-	Un guion literal
+\d{3}	Otros tres dígitos
+-	Otro guion literal
+\d{3}	Últimos tres dígitos
+$	Final de la cadena
+
+
+UN CODIGO DE UN ARTICULO
+
+^[A-Za-z]{3}-\d{4}$
+
+Explicación
+
+^	Inicio de la cadena
+[A-Za-z]{3}	Tres letras, mayúsculas o minúsculas
+-	Guion literal
+\d{4}	Cuatro dígitos (0–9)
+$	Final de la cadena

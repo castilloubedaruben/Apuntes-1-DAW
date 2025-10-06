@@ -155,7 +155,7 @@ Ej: find /home(ruta donde buscar) -name(opciones comando) "*.txt"(expresion que 
 -Opciones comunes:
 
 -name: Busca archivos por nombre.
-find /ruta -name "*.txt"
+find /ruta -name "*.txt" (busca que acabe en .txt, si pones *txt*, que tenga en su nombre eso)
 
 -iname: Busca archivos por nombre (sin tener en cuenta mayúsculas y minúsculas).
 
@@ -163,7 +163,7 @@ find /ruta -name "*.txt"
 find /ruta -type d
 find /ruta -type f
 
--mtime: Busca archivos por la fecha de modificación (en días).
+-mtime: Busca archivos por la fechmv ./documentacion ./carpetasa de modificación (en días).
 find /ruta -mtime -7 (- para archivos que hayan sido modificados, + que no hayan sido modificados en x tiempo)
 
 -mmin: Busca archivos por la fecha de modificación (en minutos).

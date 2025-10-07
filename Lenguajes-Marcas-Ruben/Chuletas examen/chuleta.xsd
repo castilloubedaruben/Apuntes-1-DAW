@@ -2,6 +2,7 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
 </xs:schema>
 
 
@@ -9,18 +10,18 @@
 <xs:element name="poner aqui la raiz. ejemplo: clase">
     <xs:complexType>
         <xs:sequence>
-            <xs:element name="elementos que forman la raiz. ejemplo: alumno" maxOccurs="unbounded " cuando es indefinido"">
-                <xs:complextype>
+            <xs:element name="elementos que forman la raiz. ejemplo: alumno" maxOccurs="unbounded" cuando es indefinido>
+                <xs:complexType>
                     <xs:sequence>
                         <xs:element name="elementos que lo conforman. ejemplo: de alumno, nombre, edad, dani, notas">
                             <xs:simpleType>
-                                <xs:restriction base="xs:se pone si es string,interger,decimal">
-                                    <xs:pattern value="suele ser un regex">
+                                <xs:restriction base="xs:se pone si es string,integer,decimal">
+                                    <xs:pattern value="suele ser un regex"/>
                                 </xs:restriction>
                             </xs:simpleType>
                         </xs:element>
                     </xs:sequence>
-                </xs:complextype>
+                </xs:complexType>
             </xs:element>
         </xs:sequence>
         <xs:attribute name="nombre del atributo" use="required">
@@ -33,13 +34,46 @@
     </xs:complexType>
 </xs:element>
 
+los atributos siempre tiene el use="required"
+
+            <xs:element name="proveedor" minOccurs="0" maxOccurs="unbounded "> 
+            <!-- Cada producto puede tener 0 o más proveedor: por eso se pone el minimo 0 y maximo -->
+                <xs:complexType>
+
+<!-- Cuando no tiene restricciones ni nada se pone asi: -->
+
+    <xs:element name="nombre" type="xs:string"/>
+
+
+        <xs:element name="X">
+            <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="X"/>
+                    <xs:maxInclusive value="Y"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+
+
+                <xs:element name="X">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Y"/>
+                                <xs:enumeration value="Z"/>
+                                <xs:enumeration value="T"/>
+                                <xs:enumeration value="H"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+
+
 <xs:maxLength value="100"/>
 
-
+En XSD no se usan los anclajes ^ y $ — se asume automáticamente que el patrón debe coincidir con toda la cadena.
 REGEX:
 DNI español
 
-^\d{8}[A-Z]$
+\d{8}[A-Z]
 
 Explicación:
 ^	Inicio de la cadena (para que no haya nada antes)
@@ -50,7 +84,7 @@ $	Final de la cadena (para que no haya nada después)
 
 Email
 
-^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$
+[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}
 
 Explicación:
 ^	Inicio de la cadena
@@ -62,7 +96,7 @@ Explicación:
 $	Fin de la cadena
 
 TELEFONO
-^\d{3}-\d{3}-\d{3}$
+\d{3}-\d{3}-\d{3}
 
 Explicación
 ^	Inicio de la cadena
@@ -76,7 +110,7 @@ $	Final de la cadena
 
 UN CODIGO DE UN ARTICULO
 
-^[A-Za-z]{3}-\d{4}$
+[A-Za-z]{3}-\d{4}
 
 Explicación
 

@@ -4,42 +4,64 @@ el archivo xml hecho con dtd se empieza con esto
 
 Ejemplo de DTD Interna:
 
-<!DOCTYPE libro [
-<!ELEMENT libro (titulo, autor, editorial)>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+<!ELEMENT biblioteca (seccion+)>
+<!ELEMENT seccion (nombre,libro+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT libro (titulo,autor,anio?)>
 <!ELEMENT titulo (#PCDATA)>
 <!ELEMENT autor (#PCDATA)>
-<!ELEMENT editorial (#PCDATA)>
+<!ELEMENT anio (#PCDATA)>
 ]>
-<libro>
-    <titulo>Aprendiendo XML</titulo>
-    <autor>Juan Pérez</autor>
-    <editorial>Editorial Ejemplo</editorial>
-</libro>
+<biblioteca>
+    <seccion>
+        <nombre>literatura</nombre>
+        <libro>
+            <titulo>el arte de volar</titulo>
+            <autor>franz wager</autor>
+            <anio>1975</anio>
+        </libro>
+    </seccion>
+    <seccion>
+        <nombre>historia</nombre>
+        <libro>
+            <titulo>el muro de berlin</titulo>
+            <autor>walter</autor>
+            <anio>1990</anio>
+        </libro>
+    </seccion>
+</biblioteca>
 
 
 
 Ejemplo de DTD Externa:
 
-<!DOCTYPE libro SYSTEM "libro.dtd">
-<libro>
-    <titulo>Aprendiendo XML</titulo>
-    <autor>Juan Pérez</autor>
-    <editorial>Editorial Ejemplo</editorial>
-</libro>
 
-El archivo libro.dtd contendría las definiciones:
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tienda SYSTEM "tienda.dtd">
+<tienda>
+    <nombre>tiendecita azulea</nombre>
+    <pokemon>
+        <nombre>pikachu</nombre>
+        <tipo>electrico</tipo>
+        <precio>1500</precio>
+    </pokemon>
+    <pokemon>
+        <nombre>pikachu</nombre>
+        <tipo>electrico</tipo>
+        <precio>1500</precio>
+    </pokemon>
+</tienda>
 
-<!ELEMENT libro (titulo, autor, editorial)>
-<!ELEMENT titulo (#PCDATA)>
-<!ELEMENT autor (#PCDATA)>
-<!ELEMENT editorial (#PCDATA)>
 
-<!ELEMENT liga (entrenador+)>
-<!ELEMENT entrenador (nombre, pokemon+)>
-<!ELEMENT pokemon (nombre, tipo+, nivel+)>
+El archivo tienda.dtd contendría las definiciones:
+
+<!ELEMENT tienda (nombre, pokemon+)>
 <!ELEMENT nombre (#PCDATA)>
+<!ELEMENT pokemon (nombre, tipo+, precio)>
 <!ELEMENT tipo (#PCDATA)>
-<!ELEMENT nivel (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
 
 Cantidad de ocurrencias: 
 El número de veces que un elemento puede aparecer se define mediante los operadores +, *, ?:

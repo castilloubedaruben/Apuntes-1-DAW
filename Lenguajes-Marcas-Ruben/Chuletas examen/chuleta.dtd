@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+el archivo xml hecho con dtd se empieza con esto
+
+
+Ejemplo de DTD Interna:
+
+<!DOCTYPE libro [
+<!ELEMENT libro (titulo, autor, editorial)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT editorial (#PCDATA)>
+]>
+<libro>
+    <titulo>Aprendiendo XML</titulo>
+    <autor>Juan Pérez</autor>
+    <editorial>Editorial Ejemplo</editorial>
+</libro>
+
+
+
+Ejemplo de DTD Externa:
+
+<!DOCTYPE libro SYSTEM "libro.dtd">
+<libro>
+    <titulo>Aprendiendo XML</titulo>
+    <autor>Juan Pérez</autor>
+    <editorial>Editorial Ejemplo</editorial>
+</libro>
+
+El archivo libro.dtd contendría las definiciones:
+
+<!ELEMENT libro (titulo, autor, editorial)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT editorial (#PCDATA)>
+
+<!ELEMENT liga (entrenador+)>
+<!ELEMENT entrenador (nombre, pokemon+)>
+<!ELEMENT pokemon (nombre, tipo+, nivel+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT nivel (#PCDATA)>
+
+Cantidad de ocurrencias: 
+El número de veces que un elemento puede aparecer se define mediante los operadores +, *, ?:
+
++ indica que el elemento debe aparecer al menos una vez.
+* indica que el elemento puede aparecer cero o más veces.
+? indica que el elemento es opcional y puede aparecer una o ninguna vez

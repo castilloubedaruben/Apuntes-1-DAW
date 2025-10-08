@@ -18,6 +18,9 @@ Favorece la colaboración entre varios desarrolladores, permitiendo unir cambios
 Además, registra quién hizo cada modificación y cuándo, lo que ayuda a revisar el trabajo.
 Con las ramas, se pueden probar ideas nuevas sin afectar el proyecto principal.
 
+
+asdfas
+
 ## *1.1.Instalacion de GIT*
 Git es compatible tanto en Linux,macOS y Windows. 
  - **Instalación en Linux**

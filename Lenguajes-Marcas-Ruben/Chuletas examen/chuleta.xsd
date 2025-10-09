@@ -22,18 +22,22 @@
                             </xs:simpleType>
                         </xs:element>
                     </xs:sequence>
+                    <!-- Aqui iria el atributo si el elemento alumno tuviera -->
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
-        <xs:attribute name="nombre del atributo" use="required">
-            <xs:simpleType>
-                <xs:restriction base="">
-                    <xs:pattern value="" />
-                </xs:restriction>
-            </xs:simpleType>
-        </xs:attribute>
+        <!-- Aqui iria el atributo si clase tuviera  -->
     </xs:complexType>
 </xs:element>
+
+<xs:attribute name="nombre del atributo" use="required">
+    <xs:simpleType>
+        <xs:restriction base="">
+            <xs:pattern value="" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:attribute>
+
 los atributos siempre tiene el use="required"
 
 <xs:element name="proveedor" minOccurs="0" maxOccurs="unbounded ">
@@ -44,12 +48,22 @@ los atributos siempre tiene el use="required"
 
 <xs:element name="nombre" type="xs:string" />
 
+<!-- Cuando un elemento se compone de solo un atributo se pone asi-->
+        <xs:element name="duracion">
+            <xs:complexType>
+                <xs:attribute name="horas" use="required">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:positiveInteger"/>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:complexType>
+        </xs:element>
 
 <xs:element name="X">
     <xs:simpleType>
         <xs:restriction base="xs:integer">
-            <xs:minInclusive value="X" />
-            <xs:maxInclusive value="Y" />
+            <xs:minInclusive value="X"/>
+            <xs:maxInclusive value="Y"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:element>
@@ -58,16 +72,16 @@ los atributos siempre tiene el use="required"
 <xs:element name="X">
     <xs:simpleType>
         <xs:restriction base="xs:string">
-            <xs:enumeration value="Y" />
-            <xs:enumeration value="Z" />
-            <xs:enumeration value="T" />
-            <xs:enumeration value="H" />
+            <xs:enumeration value="Y"/>
+            <xs:enumeration value="Z"/>
+            <xs:enumeration value="T"/>
+            <xs:enumeration value="H"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:element>
 
 
-<xs:maxLength value="100" />
+<xs:maxLength value="100"/>
 
 En XSD no se usan los anclajes ^ y $ — se asume automáticamente que el patrón debe coincidir con
 toda la cadena.
@@ -123,5 +137,15 @@ $ Final de la cadena
 
 
 nombre con tildes:
+
+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(\s[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*
+
+[A-ZÁÉÍÓÚÑ][
+La primera letra debe ser mayúscula (A–Z o con tilde/ñ).
+[a-záéíóúñ]+
+Luego vienen una o más letras minúsculas (permite tildes y ñ).
+(\s[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*   Este grupo es opcional y repetible (*) → permite uno o más apellidos o segundos nombres, separados por un espacio (\s). 
+Cada palabra también empieza conmayúscula y sigue con minúsculas.
+
 
 [A-Za-z]*[a-áéíóú]*

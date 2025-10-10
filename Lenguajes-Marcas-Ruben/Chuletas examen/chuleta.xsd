@@ -69,6 +69,20 @@ los atributos siempre tiene el use="required"
 </xs:element>
 
 
+<xs:complexType>
+                                                            <xs:choice>
+                                                                <xs:element name="seriesRepeticiones" type="xs:positiveInteger"/>
+                                                                <xs:element name="duracionBloque">
+                                                                    <xs:simpleType>
+                                                                        <xs:restriction base="xs:positiveInteger">
+                                                                            <xs:minInclusive value="5"/>
+                                                                            <xs:maxInclusive value="120"/>
+                                                                        </xs:restriction>
+                                                                    </xs:simpleType>
+                                                                </xs:element>
+                                                            </xs:choice>
+                                                        </xs:complexType>
+
 <xs:element name="X">
     <xs:simpleType>
         <xs:restriction base="xs:string">
@@ -145,7 +159,7 @@ La primera letra debe ser mayúscula (A–Z o con tilde/ñ).
 [a-záéíóúñ]+
 Luego vienen una o más letras minúsculas (permite tildes y ñ).
 (\s[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*   Este grupo es opcional y repetible (*) → permite uno o más apellidos o segundos nombres, separados por un espacio (\s). 
-Cada palabra también empieza conmayúscula y sigue con minúsculas.
+Cada palabra también empieza con mayúscula y sigue con minúsculas.
 
 
 [A-Za-z]*[a-áéíóú]*

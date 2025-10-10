@@ -5,19 +5,21 @@
 
   let numeroUsuario = Number(prompt("Indica un numero"));
   let contador = 2;
-  let siguienteNumero = numeroUsuario +1
+  let esPrimo = false
 
-  while (numeroUsuario % contador != 0) {
-    contador++;
-  }
-  if (numeroUsuario == contador ) {
-    console.log(numeroUsuario + " es primo");
-  } else {
+  while (!esPrimo) { // esPrimo==false
+
     contador = 2
-  while (siguienteNumero % contador !=0) {
-      contador++
+    while (numeroUsuario % contador != 0) {
+      contador++;
     }
-    console.log(siguienteNumero + " no es primo")
+    if (numeroUsuario == contador) {
+      console.log(numeroUsuario + " es primo");
+      esPrimo = true
+    } else {
+      console.log(numeroUsuario + " no es primo");
+      numeroUsuario++
+    }
+    console.log("fin del bucle interno");
   }
-  console.log("fin del bucle")
 </script>

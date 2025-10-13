@@ -1,0 +1,33 @@
+<script>
+  // 1. Calificaciones de estudiantes
+  // Crea un programa que reciba las calificaciones de N estudiantes (se piden calificaciones hasta que el usuario introduzca un "-1") y calcule el promedio.
+  // Luego muestra cuántos estudiantes están aprobados (>=5) y cuántos suspensos.
+
+  // Ejemplo:
+
+  // Introduce la calificacion del alumno 1: 4
+  // Introduce la calificacion del alumno 2: 1
+  // Introduce la calificacion del alumno 3: 10
+  // Introduce la calificacion del alumno 4: 8
+  // Introduce la calificacion del alumno 5: -1
+
+  // Hay 2 alumnos aprobados y 2 alumnos suspensos.
+  // La calificación media es 5.75
+
+    let contador = 1;
+    let calificacion = "";
+    const APROBADO = ((calificacion >=5) || (calificacion<=10))
+
+    while (calificacion != -1) {
+      calificacion = Number(prompt("Introduce la calificacion del alumno " + contador + ":"));
+      contador++;
+      console.log("Introduce la calificacion del alumno " + contador + ": " + calificacion);
+        if ((calificacion < -1) || (calificacion > 10)) {
+        console.log("Calificacion no valida. La calificacion debe estar entre 0 y 10");
+    } else if (calificacion != APROBADO) {
+        contador=1
+        console.log("El alumno " + contador + " esta aprobado")
+    }
+}
+
+</script>

@@ -14,20 +14,30 @@
   // Hay 2 alumnos aprobados y 2 alumnos suspensos.
   // La calificación media es 5.75
 
-    let contador = 1;
-    let calificacion = "";
-    const APROBADO = ((calificacion >=5) || (calificacion<=10))
+  let contador = 1;
+  let sumatorio = 0
+  let calificacion = "";
+  let alumnosAprobados = 0;
+  let alumnosSuspensos = 0;
+  let promedio = 0
 
-    while (calificacion != -1) {
-      calificacion = Number(prompt("Introduce la calificacion del alumno " + contador + ":"));
-      contador++;
-      console.log("Introduce la calificacion del alumno " + contador + ": " + calificacion);
-        if ((calificacion < -1) || (calificacion > 10)) {
-        console.log("Calificacion no valida. La calificacion debe estar entre 0 y 10");
-    } else if (calificacion != APROBADO) {
-        contador=1
-        console.log("El alumno " + contador + " esta aprobado")
+  while (calificacion != -1) {
+
+      while (calificacion < 0 || calificacion > 10) {
+        calificacion = Number(prompt("Calificacion incorrecta. Introduce la calificacion del alumno " + contador + ":"))
+      }
+
+    calificacion = Number(prompt("Introduce la calificacion del alumno " + contador + ":"));
+    contador++;
+    sumatorio+=calificacion;
+    
+    if (calificacion >= 5) {
+      alumnosAprobados++
+    } else {
+      alumnosSuspensos++
     }
-}
-
+    promedio=sumatorio/()
+  }
+  console.log("Hay " + alumnosAprobados + " alumnos aprobados y " + alumnosSuspensos + " alumnos suspensos.");
+  console.log("La calificacion media es de " + promedio)
 </script>

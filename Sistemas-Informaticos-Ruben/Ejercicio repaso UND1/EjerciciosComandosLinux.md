@@ -104,57 +104,69 @@ mv ./dir3/dir31 ./dir2
 ### 17. Mostrar por pantalla los archivos ordinarios del directorio `HOME` y sus subdirectorios.
 
 ```bash
-tree /home
-ópwd
-ls -R /home
+tree ~
+ó
+ls -R ~
 ```
 
 ### 18. Ocultar el archivo mensaje del directorio dir2.
 
 ```bash
-
+cd dir3/dir31
+mv mensaje.txt .mensaje.txt
 ```
 
 ### PT8.1.- Sitúate en tu `HOME`.
 
 ```bash
-
+pwd (veo donde estoy)
+cd ../(me muevo hacia atras todas las veces que necesite)
+pwd /home/alumnoM
 ```
 
 ### PT8.2.- Crea un directorio `examen`.
 
 ```bash
 
-
+mkdir examen
 ```
 
 ### PT8.3.- Dentro de `examen`, crea los directorios `ejercicios1` y `ejercicios2`.
 
 ```bash
-
+mkdir ejercicios1 ejercicios2
 ```
 
 ### PT8.4.- Crea un fichero de texto llamado `file1.dat` en `ejercicios1`.
 
 ```bash
-
+cd ejercicios2
+touch file1.dat
 ```
 
 ### PT8.5.- Haz una copia del fichero `file1.dat` dentro de `ejercicios2`.
 
 ```bash
-
+pwd /home/alumnoM/examen/ejercicios2
+cp file1.dat ../ejercicios1
 ```
 
 ### PT8.6.- Sitúate en `ejercicios2`.
 
 ```bash
+pwd /home/alumnoM/examen
+cd ./ejercicios1
 
 ```
 
 ### PT8.7.- Mueve el archivo `file1.dat` hasta `ejercicios2/mover`, poniendo como nombre de destino `file1_movido.dat`. Ten en cuenta que, posiblemente, tendrás que crear antes el directorio.
 
 ```bash
+pwd /home/alumnoM/examen/ejercicios2
+mkdir ./mover
+mv file1.dat ./mover
+cd mover
+mv file1.dat file1_movido.da
 
 
 ```

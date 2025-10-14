@@ -109,7 +109,7 @@ ejem: cp -r "nombre de una carpeta X" /AlumnoM/Docuemntos/Apuntes
 
 mv → mover o renombrar:
 
-mv archivo.txt /AlumnoM/Docuemntos/Apuntes
+mv archivo.txt /AlumnoM/Documentos/Apuntes
 mv archivo.txt archivo2.txt (cambia el nombre del archivo)
 mv /AlumnoM/Documentos/Apuntes/Programacion /AlumnoM/Docuemntos/Apuntes/SistemasInformaticos
 
@@ -215,6 +215,8 @@ nano	Editar archivos.	                nano archivo.txt
 find	Buscar archivos.	                find /home -name "*.jpg"
 grep	Buscar texto en archivos.	        grep "error" archivo.log
 
+### TIPS
+
 ```bash
 *txt* "que contenga lo que hay dentro de los *"
 
@@ -225,3 +227,7 @@ txt* "empiece por lo de delante del * y acabe como sea"
 ?a?? "busca palabras de 4 digitos que la segunda lentra sea una a" 
 
 ```
+
+ocultar archivo: 
+
+Si tienes un archivo llamado ejemplo.txt, debes renombrarlo a .ejemplo.txt usando el comando mv 

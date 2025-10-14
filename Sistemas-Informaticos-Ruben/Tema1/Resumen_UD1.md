@@ -92,6 +92,8 @@ cd → moverte entre carpetas:
 ls → ver archivos/carpetas: 
 ls -l (muestra mas informacion)
 ls -a (muestra archivos ocultos)
+ls -R (muestra de forma recursiva todo)
+
 
 tree → ver estructura en forma de árbol.
 ```
@@ -212,3 +214,14 @@ tail	Ver últimas líneas.	                tail -f log.txt (en tiempo real)
 nano	Editar archivos.	                nano archivo.txt
 find	Buscar archivos.	                find /home -name "*.jpg"
 grep	Buscar texto en archivos.	        grep "error" archivo.log
+
+```bash
+*txt* "que contenga lo que hay dentro de los *"
+
+txt* "empiece por lo de delante del * y acabe como sea"
+
+*txt "acabe por lo de detras del * y empiece como sea"
+
+?a?? "busca palabras de 4 digitos que la segunda lentra sea una a" 
+
+```

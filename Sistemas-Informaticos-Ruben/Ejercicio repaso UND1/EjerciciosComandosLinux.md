@@ -24,7 +24,7 @@ ls -R /etc/t*
 ### 4. Listar todos los archivos del directorio `dev` que empiecen por *tty* y tengan 5 caracteres.
 
 ```bash
-ls /dev/tty??*
+ls /dev/tty??
 ```
 
 ### 5. Listar todos los archivos del directorio `dev` que empiecen por *tty* y acaben en *1,2,3 ó 4*.
@@ -76,31 +76,37 @@ mkdir -p dir1/dir11 dir2/dir31/dir311
 ### 13. Copiar un archivo `/etc/magic` a un archivo llamado `mensaje` de vuestro directorio `PRUEBA`.
 
 ```bash
-
+cp -r /etc/magic ./mensaje.txt
 ```
 
 ### 14. Copiar mensaje en `dir1` y `dir2`, y verificarlo.
 
 ```bash
-
+mkdir dir1 dir2
+cp mensaje.txt ./dir1
+cp mensaje.txt ./dir2
 ```
 
 ### 15. Copiar en el directorio `dir311` los archivos de `/bin` que tengan una *a* como segunda letra y su nombre tenga cuatro letras.
 
 ```bash
-
+pwd /home/alumnoT/Documentos/prueba
+mkdir dir311
+cp -r /bin/?a?? ./dir3/dir31/dir311
 ```
 
 ### 16. Mover el directorio `dir31` y sus subdirectorios debajo de `dir2`.
 
 ```bash
-
+mv ./dir3/dir31 ./dir2
 ```
 
 ### 17. Mostrar por pantalla los archivos ordinarios del directorio `HOME` y sus subdirectorios.
 
 ```bash
-
+tree /home
+ópwd
+ls -R /home
 ```
 
 ### 18. Ocultar el archivo mensaje del directorio dir2.

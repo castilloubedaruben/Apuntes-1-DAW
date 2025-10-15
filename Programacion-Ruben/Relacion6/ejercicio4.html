@@ -21,6 +21,8 @@
     // Introduce los kilómetros del viaje 3: 1000
     // ¡Combustible insuficiente!
 
+// SIN ACABAR: ME FALLA QUE NO MUESTRE EL PRECIO NI EL COMBUSTIBLE CUANDO NO HAY COMBUSTIBLE SUFICIENTE!!!!!!!!!!!
+
     let contador = 1;
     let litrosInicial = Number(prompt("Introduce el combustible inicial:"));
     let precioLitro = Number(prompt("Precio del litro de combustible:"));
@@ -50,7 +52,7 @@
                 litrosConsumidos = consumoMedio100km * (distanciaViaje / 100)
                 litrosInicial = litrosInicial - litrosConsumidos;
                 console.log("Combustible restante: " + litrosInicial)
-                
+
             } else {
                 console.log("¡Combustible insuficiente!")
             }

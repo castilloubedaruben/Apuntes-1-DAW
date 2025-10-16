@@ -1,5 +1,6 @@
 <script>
-//     6. Calculadora básica
+
+// 6. Calculadora básica
 // Crea una calculadora básica de dos números. El programa pide dos números y luego una operación (+, -, *, /). 
 // El programa pide números hasta que el usuario indique "SALIR".
 
@@ -20,13 +21,11 @@
 // Introduce el primer número: SALIR
 
 
-let primerNumero = Number(prompt("Introduce el primer número:"))
+let primerNumero = (prompt("Introduce el primer número:"))
 let segundoNumero = 0
 let operacion = ""
 let resultado
 
-
-// SIN ACABAR: FALTA HACER QUE SALGA AL INTRODUCIR "SALIR" 
 
 while (primerNumero != "SALIR") {
 
@@ -35,20 +34,21 @@ while (primerNumero != "SALIR") {
 
     if (operacion == "+") {
         resultado=primerNumero+segundoNumero
-        console.log("El resultado de " + primerNumero + " + " + segundoNumero + " es " + (resultado))
+        console.log("El resultado de " + primerNumero + " + " + segundoNumero + " es " + resultado)
     } else if (operacion=="-") {
         resultado=primerNumero-segundoNumero
-        console.log("El resultado de " + primerNumero + " - " + segundoNumero + " es " + (resultado))
+        console.log("El resultado de " + primerNumero + " - " + segundoNumero + " es " + resultado)
     } else if (operacion=="*") {
         resultado=primerNumero*segundoNumero
-        console.log("El resultado de " + primerNumero + " * " + segundoNumero + " es " + (resultado))
-    } else {
+        console.log("El resultado de " + primerNumero + " * " + segundoNumero + " es " + resultado)
+    } else if (operacion=="/"){
         resultado=primerNumero/segundoNumero
-        console.log("El resultado de " + primerNumero + " / " + segundoNumero + " es " + (resultado))
+        console.log("El resultado de " + primerNumero + " / " + segundoNumero + " es " + resultado)
+    } else {
+        console.log("Introduce el primer número: SALIR")
         }
+        primerNumero = Number(prompt("Introduce el primer número:"))
     } 
-    console.log("Introduce el primer número:" + SALIR)
     
-
 
 </script>

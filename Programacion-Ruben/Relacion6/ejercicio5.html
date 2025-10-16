@@ -24,7 +24,7 @@ let temperaturaTotal = 0
 let diasSemana = 7
 
 
-for (let i = 1; i <= 7; i++) {
+for (let i = 1; i <= diasSemana; i++) {
 
     temperatura = Number(prompt("Introduce la temperatura del día " + i + " : "))
     console.log("Introduce la temperatura del día " + i + " : " + temperatura)
@@ -32,7 +32,7 @@ for (let i = 1; i <= 7; i++) {
 
     if ((temperatura < -20) || (temperatura > 50)) {
         console.log("Temperatura incorrecta. Debe estar entre -20 y 50")
-        i--
+        temperatura = Number(prompt("Introduce la temperatura del día " + i + " : "))
     } else {
         temperaturaTotal+=temperatura
     } 

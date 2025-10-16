@@ -20,24 +20,18 @@
 // Introduce el primer número: SALIR
 
 
-let primerNumero = 0
+let primerNumero = Number(prompt("Introduce el primer número:"))
 let segundoNumero = 0
 let operacion = ""
 let resultado
-const SALIR = String("SALIR")
+
 
 // SIN ACABAR: FALTA HACER QUE SALGA AL INTRODUCIR "SALIR" 
 
-while ((primerNumero != SALIR) || (segundoNumero != SALIR)) {
+while (primerNumero != "SALIR") {
 
-    primerNumero=Number(prompt("Introduce el primer número:"))
     segundoNumero=Number(prompt("Introduce el segundo número:"))
     operacion=prompt("Introduce la operación:")
-
-    console.log("Introduce el primer número:" + primerNumero)
-    console.log("Introduce el segundo número:" + segundoNumero)
-    console.log("Introduce la operación:" + operacion)
-
 
     if (operacion == "+") {
         resultado=primerNumero+segundoNumero

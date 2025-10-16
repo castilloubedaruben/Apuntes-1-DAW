@@ -28,6 +28,7 @@
     let precioLitro = Number(prompt("Precio del litro de combustible:"));
     let consumoMedio100km = Number(prompt("Consumo cada 100km"));
     let distanciaViaje = ""
+    let quedaCombustible = true
 
     let precioMedioKm = (consumoMedio100km * ((precioLitro * distanciaViaje) / 100))
     let litrosConsumidos = consumoMedio100km * (distanciaViaje / 100);
@@ -36,27 +37,20 @@
     console.log("Precio del litro de combustible: " + precioLitro);
     console.log("Consumo cada 100km : " + consumoMedio100km);
 
-    while (litrosInicial > 0) {
+if (litrosConsumidos>0) {
+    while (quedaCombustible) {
 
-        if ((litrosInicial <= 0) || (precioLitro <= 0) || (consumoMedio100km <= 0)) {
-            console.log("Los datos tienen que ser mayores de 0")
-
-        } else {
             if (litrosInicial > 0) {
                 distanciaViaje = prompt("Introduce los kilómetros del viaje " + contador + ":");
                 console.log("Introduce los kilómetros del viaje " + contador + ": " + distanciaViaje)
-
+                contador++
                 precioMedioKm = (consumoMedio100km * ((precioLitro * distanciaViaje) / 100))
                 console.log("Precio del viaje: " + precioMedioKm);
 
                 litrosConsumidos = consumoMedio100km * (distanciaViaje / 100)
                 litrosInicial = litrosInicial - litrosConsumidos;
                 console.log("Combustible restante: " + litrosInicial)
-
-            } else {
-                console.log("¡Combustible insuficiente!")
             }
-            contador++
         }
     } console.log("¡Combustible insuficiente!")
 

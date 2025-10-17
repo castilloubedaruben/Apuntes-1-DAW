@@ -1,0 +1,46 @@
+<script>
+
+    //     2. Gasolinera Dinoco
+    // Simula el repostaje de varios coches. 
+    // Cada coche tiene un tanque de 60 litros y reposta hasta llenarlo. 
+    // El programa debe preguntar cuántos litros echa cada vez y detenerse cuando el tanque está lleno.
+
+    // Muestra cuántas veces ha repostado y el total gastado (precio/litro: 1.25€)
+    // 🧪 Ejemplo:
+    // Repostaje 1: 20
+    // Repostaje 2: 30
+    // Repostaje 3: 10
+
+    // ¡Depósito lleno!
+    // Total de repostajes: 3
+    // Total gastado: 75€
+
+    let tanqueLleno = 60
+    let precioLitro = 1.25
+    let contador = 1
+    let repostaje = Number(prompt("Respostaje " + contador + ": "))
+    let repostajeTotal = 0
+    let precioTotal = 0
+
+    if (repostaje <= 0) {
+        console.log("El repostaje tiene que ser un numero positivo mayor que 0")
+        repostaje = Number(prompt("Respostaje " + contador + ": "))
+    } else {
+        while (repostajeTotal < tanqueLleno) {
+            console.log("Respostaje " + contador + ": " + repostaje);
+            repostajeTotal += repostaje
+            if (repostajeTotal < tanqueLleno) {
+                contador++
+                repostaje = Number(prompt("Respostaje " + contador + ": "))
+            }
+        }
+    }
+
+    precioTotal = repostajeTotal * precioLitro
+
+    console.log("¡Depósito lleno!");
+    console.log("Total de repostajes: " + contador);
+    console.log("Total gastado: " + precioTotal + "€")
+
+
+</script>

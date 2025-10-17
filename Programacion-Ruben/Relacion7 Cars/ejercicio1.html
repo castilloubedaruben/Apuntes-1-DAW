@@ -32,7 +32,6 @@ let totalCoches = 0
 let tiempoMedioVuelta = 0
 
 
-
     while (nombreCoche!="FIN") { 
         console.log("Nombre del coche " + contador + " : " + nombreCoche)
 
@@ -42,10 +41,10 @@ let tiempoMedioVuelta = 0
         contador++
         nombreCoche = prompt("Nombre del coche " + contador + " : ") 
         }
-        
-        console.log("Total de coches:" + contador);
+        contador=contador-1
+        console.log("Total de coches: " + contador);
         tiempoMedioVuelta= tiempoMedioVuelta/contador
-        console.log("Tiempo medio:" + tiempoMedioVuelta)
+        console.log("Tiempo medio: " + tiempoMedioVuelta)
 
 
 </script>

@@ -3,7 +3,6 @@
 Aprende a usar **Git desde la terminal de Linux (Bash)** paso a paso, con los comandos más usados y ejemplos reales para una prueba técnica o trabajo profesional.
 
 ---
-
 ## 🪄 Estructura básica de un comando Git
 
 ```bash

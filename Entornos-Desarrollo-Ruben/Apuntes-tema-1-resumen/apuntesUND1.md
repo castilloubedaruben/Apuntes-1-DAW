@@ -17,11 +17,13 @@ permite alojar repositorios, revisar código mediante *pull requests*, seguir in
 git config --global user.name "Tu Nombre"
 git config --global user.email "tuemail@ejemplo.com"
 ```
-2. Iniciar un repositorio
+
+### 2. Iniciar un repositorio
 ```bash
 git init
 ```
-3. Ciclo de vida de los archivos
+
+### 3. Ciclo de vida de los archivos
 
     Untracked: archivos nuevos que Git aún no sigue.
 
@@ -29,7 +31,7 @@ git init
 
     Committed: cambios guardados en el historial del proyecto.
 
-4. Control de cambios
+### 4. Control de cambios
 ```bash
 
 git add <archivo>      # Añade archivo al área de preparación
@@ -38,7 +40,8 @@ git status              # Verifica el estado actual
 git log                 # Muestra el historial de commits
 
 ```
-5. Conexión con GitHub
+
+### 5. Conexión con GitHub
 
 ```bash
 git remote add origin https://github.com/usuario/repo.git
@@ -47,7 +50,7 @@ git pull origin main
 git clone https://github.com/usuario/repo.git
 ```
 
-6. Trabajo con ramas
+### 6. Trabajo con ramas
 ```bash
 git branch nombre_rama          # Crea una nueva rama
 git checkout nombre_rama        # Cambia de rama
@@ -55,7 +58,7 @@ git checkout -b nombre_rama     # Crea y cambia en un solo paso
 git merge nombre_rama           # Fusiona ramas
 ```
 
-7. Colaboración y Pull Requests
+### 7. Colaboración y Pull Requests
 
     Usa ramas para nuevas funciones o correcciones.
 
@@ -65,7 +68,7 @@ git merge nombre_rama           # Fusiona ramas
 
     Una vez aprobada, se fusiona con la rama principal (main o master).
 
-8. Funciones avanzadas
+### 8. Funciones avanzadas
 ```bash
 git reset --soft HEAD^   # Deshace el último commit sin borrar cambios
 git reset --hard HEAD^   # Deshace el commit y elimina los cambios
@@ -76,7 +79,8 @@ git tag v1.0.0           # Crea una etiqueta (versión)
 git push origin v1.0.0   # Sube la etiqueta al remoto
 ```
 
-🧩 Resumen de Comandos Esenciales de Git
+#### 🧩 Resumen de Comandos Esenciales de Git
+
 Comando	Descripción breve
 ```bash
 git --version	Muestra la versión instalada de Git.
@@ -133,14 +137,14 @@ git tag v1.0.0	Crea una etiqueta (versión).
 
 git push origin v1.0.0	Sube la etiqueta al remoto.
 ```
-💡 Consejos finales
+#### 💡 Consejos finales
 
-    Haz commits frecuentes y descriptivos.
++ Haz commits frecuentes y descriptivos.
 
-    Usa ramas para mantener el trabajo organizado.
++ Usa ramas para mantener el trabajo organizado.
 
-    Sincroniza a menudo con el remoto (git pull).
++ Sincroniza a menudo con el remoto (git pull).
 
-    No temas usar git status constantemente.
++ No temas usar git status constantemente.
 
-    Revisa el historial con git log antes de hacer merges o pushes.
++ Revisa el historial con git log antes de hacer merges o pushes.

@@ -4,25 +4,37 @@
 // Invierte el array utilizando alguno (o varios) de las siguientes funciones: push(), pop(), shift() y unshift().
 // Imprime el array invertido.
 
+// Forma sin bucles:
+// let letras = ["a","b","c","d"]
+// let letrasInvertidas=[]
+// let letraEliminada = 0
+// letraEliminada=letras.pop()
+// letrasInvertidas.push (letraEliminada)
+// console.log(letrasInvertidas);
+
+// letraEliminada=letras.pop()
+// letrasInvertidas.push (letraEliminada)
+// console.log(letrasInvertidas);
+
+// letraEliminada=letras.pop()
+// letrasInvertidas.push (letraEliminada)
+// console.log(letrasInvertidas);
+
+// letraEliminada=letras.pop()
+// letrasInvertidas.push (letraEliminada)
+// console.log(letrasInvertidas);
+
 let letras = ["a","b","c","d"]
-let letrasInvertidas=[]
+let letrasTamanio = letras.length
 let letraEliminada = 0
-letraEliminada=letras.pop()
-letrasInvertidas.push (letraEliminada)
-console.log(letrasInvertidas);
+let letrasInvertidas=[]
 
-letraEliminada=letras.pop()
-letrasInvertidas.push (letraEliminada)
+for (let i = 0; i < letrasTamanio; i++) {
+    letraEliminada=letras.pop();
+    letrasInvertidas.push(letraEliminada)
+    
+}
 console.log(letrasInvertidas);
-
-letraEliminada=letras.pop()
-letrasInvertidas.push (letraEliminada)
-console.log(letrasInvertidas);
-
-letraEliminada=letras.pop()
-letrasInvertidas.push (letraEliminada)
-console.log(letrasInvertidas);
-
 
 
 

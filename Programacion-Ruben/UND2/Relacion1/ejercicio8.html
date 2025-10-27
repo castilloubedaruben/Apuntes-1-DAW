@@ -4,8 +4,11 @@
 // Usa una variable temporal para intercambiar los valores del primer y tercer elemento, e imprime el array después del cambio.
 
 let numeros=[100,200,300]
-numeros[0] = 300
-numeros[2] = 100
+let numeroRobado=numeros.pop()
+let numeroRobado2=numeros.shift()
+
+numeros.push(numeroRobado2)
+numeros.unshift(numeroRobado)
 
 console.log(numeros);
 

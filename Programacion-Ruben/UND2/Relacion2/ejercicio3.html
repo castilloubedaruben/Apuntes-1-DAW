@@ -10,6 +10,18 @@
 // 5.Si el usuario escribe "FIN", el programa debe finalizar la compra, mostrando un resumen con todos los productos adquiridos, sus cantidades, y el costo total a pagar.
 
 
+let productos = ["teclado","raton","alfombrillas","cascos","auriculares","pantallas","portatiles","torres","cables","RAM"]
+let precios = [30,35,15,50,40,100,500,150,10,60]
+let cantidad = 0
+
+let comprar = String(prompt("Elige el articulo que quiere comprar"))
+let cantidadComprar = Number(prompt("Elige la cantidad que quieres comprar"))
+
+if (comprar!=productos) {
+    console.log("Elige un producto disponible");
+    
+} 
+console.log(`Has comprado ${cantidadComprar} unidades de ${comprar}`);
 
 
 

@@ -21,7 +21,7 @@
 
     for (let i = 0; i < LONGITUDTEMPERATURAS; i++) {
         temperaturaUsuario = Number(prompt("Introduce la temperatura:"));
-            while (temperaturaUsuario<=275 && temperaturaUsuario>=100) {
+            while (temperaturaUsuario<=-273 || temperaturaUsuario>=100) {
                 temperaturaUsuario = Number(prompt("Introduce la temperatura:"))
             }
         temperaturas.push(temperaturaUsuario)
@@ -50,7 +50,7 @@
 
     while (opcionElegida != 4) {
         opcionElegida = Number(prompt("Indique la opción que desea saber (1-2-3-4)"))
-            while (opcionElegida<=0 && opcionElegida>=5) {
+            while (opcionElegida<1 || opcionElegida>4) {
                 opcionElegida = Number(prompt("Indique la opción que desea saber (1-2-3-4)"))
             }
 

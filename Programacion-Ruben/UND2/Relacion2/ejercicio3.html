@@ -22,15 +22,17 @@
         "RAM",
     ];
     let precios = [30, 35, 15, 50, 40, 100, 500, 150, 10, 60];
+    let productosComprados = []
+    let unidadesProductosComprados = []
+
     let compraCorrecta = false;
 
     let comprarProducto = ""
     let cantidadComprar = 0
-    let totalCompraProducto = 0
     let totalCestaCompra=0
 
-    while (comprarProducto != "fin") {
-        comprarProducto = String(prompt("Elige el articulo que quiere comprar"))
+    while (comprarProducto != "fin".toLowerCase) {
+        comprarProducto = String(prompt("Elige el articulo que quiere comprar")).toLowerCase
 
         for (let i = 0; i < productos.length && compraCorrecta==false; i++) {
             if (comprarProducto == productos[i]) {
@@ -39,15 +41,15 @@
                         alert("Introduce una cantidad mayor de 0.")
                         cantidadComprar = Number(prompt("Elige la cantidad que quieres comprar"))
                     }
+                productosComprados.push(comprarProducto)
+                unidadesProductosComprados.push(cantidadComprar)
                 compraCorrecta=true
-                totalCompraProducto = cantidadComprar * precios[i];
-                totalCestaCompra+=totalCompraProducto
-                console.log(`Has comprado ${cantidadComprar} unidades de ${comprarProducto}\nEl importe es de ${totalCompraProducto}€`);
+                totalCestaCompra = cantidadComprar * precios[i];
             }
         }
         compraCorrecta=false
     }
-    console.log("Finalizaste tu compra. El importe final es de " + totalCestaCompra + "€. Hasta pronto!");
+    console.log(`Has comprado ${productosComprados}\nHas comprado las siguientes unidades ${unidadesProductosComprados}\nEl importe es de ${totalCestaCompra}€`);
     
     
 </script>

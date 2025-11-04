@@ -45,6 +45,7 @@
             nombresEstudiantes.push(anadirEstudiante);
             calificacionesEstudiantes.push(anadirCalificacion);
         } if (opcion==2) {
+            promedioCalificaciones=0
             for (let calificacion of calificacionesEstudiantes) {
                 totalCalificaciones+=calificacion
             } promedioCalificaciones= (totalCalificaciones/calificacionesEstudiantes.length).toFixed(2)

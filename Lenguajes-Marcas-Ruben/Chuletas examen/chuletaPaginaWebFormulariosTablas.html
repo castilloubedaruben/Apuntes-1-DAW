@@ -1,0 +1,90 @@
+<html>
+
+1. <form> Contenedor del formulario
+
+Define dónde y cómo se envía la información.
+
+Atributos importantes
+
+action: URL donde se envían los datos.
+<form action="/procesar-datos">
+
+method: método HTTP (GET o POST).
+<form action="/procesar-datos" method="POST">
+
+enctype: tipo de codificación (necesario para archivos).
+<form action="/subir" method="POST" enctype="multipart/form-data">
+
+
+2.1 <input type=" " >  Campo genérico
+
+El tipo depende del atributo type.
+
+Tipos comunes:
+| type       | Para                  | Ejemplo                                    |
+| ---------- | --------------------- | ------------------------------------------ |
+| `text`     | Texto corto           | `<input type="text" placeholder="Nombre">` |
+| `password` | Contraseñas           | `<input type="password">`                  |
+| `email`    | Correos               | `<input type="email">`                     |
+| `checkbox` | Múltiples selecciones | `<input type="checkbox"> Acepto`           |
+| `radio`    | Selección única       | `<input type="radio" name="gen">`          |
+| `file`     | Subir archivos        | `<input type="file">`                      |
+
+
+Atributos útiles:
+placeholder: texto que quieres que se muestre para ver que poner en la casilla
+required: hace que sea obligatorio rellenarlo
+<input type="text" required maxlength="50" placeholder="Tu nombre">
+
+2.2 <textarea>  Texto en varias líneas
+<textarea rows="filas maximas que aparecen: 4" cols="columnas: 50" placeholder="Comentario"></textarea>
+
+
+2.3 <button> – Botón de acción
+
+Enviar formulario:
+<button type="submit">Enviar</button>
+
+Reiniciar:
+<button type="reset">Reiniciar</button>
+
+Botón personalizado:
+<button type="button" onclick="miFuncion()">Click</button>
+
+2.4 <select> y <option>  Lista desplegable
+<select name="pais">
+    <option value="es">España</option>
+    <option value="mx">México</option>
+</select>
+
+Para seleecciones multiples:
+<select name="pais" multiple>
+
+3. <label>  Etiqueta para campos
+
+Mejora accesibilidad y uso.
+
+<label for="nombre">Nombre:</label>
+<input id="nombre" type="text">
+
+4. Validación en Formularios HTML
+4.1 Validación del lado del cliente (HTML5)
+
+Evita errores antes de enviar al servidor.
+
+Atributos clave:
+<input required>                <!-- obligatorio -->
+<input minlength="2">           <!-- mínimo de caracteres -->
+<input maxlength="50">          <!-- máximo -->
+<input pattern="\d{10}">        <!-- regex -->
+<input type="number" min="18" max="99">  <!-- rangos -->
+
+Ejemplo completo:
+<form>
+    <input type="text" required minlength="2">
+    <input type="email" required>
+    <input type="number" min="18" max="99" required>
+    <button type="submit">Enviar</button>
+</form>
+
+</html>

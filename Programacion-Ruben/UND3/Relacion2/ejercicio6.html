@@ -11,13 +11,19 @@
 // [["Ana", "Pedro"],["Luis", "Elena"],["Marta", "Carlos"]]
 // Solución:
 
-// SIN ACABAAAAAAR 
 
 function emparejarAmigos(arrayNombres) {
     let emparejamientos=[]
-    for (const amigo of arrayNombres) {
-        let elegirAmigo=Math.floor(Math.random()*6)
-        emparejamientos.push(arrayNombres[elegirAmigo])
+    let pareja=[]
+
+    while (arrayNombres.length!=0) {
+        while (pareja.length<2) {
+            let numeroElegirAmigo=Math.floor(Math.random()*arrayNombres.length)
+            pareja.push(arrayNombres[numeroElegirAmigo])
+            arrayNombres.splice(numeroElegirAmigo,1)
+        }
+        emparejamientos.push(pareja)
+        pareja = []
     }
     return emparejamientos
 }

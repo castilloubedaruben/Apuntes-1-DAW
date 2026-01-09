@@ -12,14 +12,20 @@ import java.util.Scanner;
 
 public class PesoLuna {
     public static void main(String[] args) {
+        // DECLARO VARIABLES COMO EN JS
+        final double GRAVEDAD = 0.165;
         Scanner scanner1 = new Scanner(System.in);
+        double pesoUsuario = 0;
+        double pesoEnLaLuna = 0;
+        
+        // SIGO EL PROGRAMA CON LAS VARIABLES
         System.out.println("Introduce tu peso");
-        int peso = scanner1.nextInt();
-        System.out.println("Tu peso es: " + peso);
+        pesoUsuario= scanner1.nextDouble();
+        System.out.println("Tu peso es: " + pesoUsuario);
+        pesoEnLaLuna = pesoUsuario * GRAVEDAD;
         scanner1.close();
 
-        final double PESOENLUNA = (peso * 0.165);
-
-        System.out.println("Tu peso en la luna es de " + PESOENLUNA);
+        // %.2f sirva para poner decir la cantidad de decimales en la variable
+        System.out.printf("Tu peso en la luna es de %.2f kgs", pesoEnLaLuna);
     }
 }

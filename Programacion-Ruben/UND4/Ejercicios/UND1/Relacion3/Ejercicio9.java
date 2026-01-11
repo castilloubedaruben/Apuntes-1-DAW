@@ -20,17 +20,20 @@ package UND4.Ejercicios.UND1.Relacion3;
 import java.util.Scanner;
 public class Ejercicio9 {
     public static void main(String[] args) {
-        int numeroDosCifras, digito1, digito2, sumaDigitos;
+        int numeroDosCifras, digito1, digito2, sumaDigitos=0;
 
         Scanner scanner1 = new Scanner(System.in);
-        System.out.println("Indique un numero de dos cifras");
+        System.out.println(" Indique un numero de dos cifras");
         numeroDosCifras=scanner1.nextInt();
         scanner1.close();
 
         if (numeroDosCifras<10 || numeroDosCifras>99) {
-            System.out.println("Indique un numero de dos cifras");
-        } else if (condition) {
-            
+            System.out.println(" Indique un numero de dos cifras");
+        } else {
+            digito1=numeroDosCifras/10;
+            digito2=numeroDosCifras%10;
+            sumaDigitos=digito1+digito2;
         }
+        System.out.println(" El resultado de la suma de los digitos de " + numeroDosCifras + " es: "+ sumaDigitos);
     }
 }

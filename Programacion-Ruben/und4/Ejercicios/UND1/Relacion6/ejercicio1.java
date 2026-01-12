@@ -13,7 +13,7 @@
   // Hay 2 alumnos aprobados y 2 alumnos suspensos.
   // La calificación media es 5.75
 
-package UND4.Ejercicios.UND1.Relacion6;
+package und4.Ejercicios.UND1.Relacion6;
 
 import java.util.Scanner;
 
@@ -25,7 +25,6 @@ public class ejercicio1 {
 
         Scanner scanner1=new Scanner(System.in);
         
-
         while (notas!=FINBUCLE) {
             System.out.println("Indique una calificación");
             notas=scanner1.nextInt();
@@ -41,6 +40,7 @@ public class ejercicio1 {
                 }
             }
         }
+        scanner1.close();
         calificacionMedia=totalNotas/(contador-1);
         System.out.println("Hay un total de " + alumnosAprobados+ " alumnos aprobados y " + alumnosSuspensos + " alumnos suspensos.\nLa calificacion media es de " + calificacionMedia);
     }

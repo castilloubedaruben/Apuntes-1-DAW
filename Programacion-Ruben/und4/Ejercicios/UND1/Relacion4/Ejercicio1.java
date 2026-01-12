@@ -9,7 +9,7 @@
 // ...  
 // 3 x 10 = 30   -->
 
-package UND4.Ejercicios.UND1.Relacion4;
+package und4.Ejercicios.UND1.Relacion4;
 import java.util.Scanner;
 
 public class Ejercicio1 {

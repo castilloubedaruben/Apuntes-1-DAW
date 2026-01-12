@@ -5,7 +5,7 @@
 
 // ¡Correcto! Has adivinado el número.
 
-package UND4.Ejercicios.UND1.Relacion4;
+package und4.Ejercicios.UND1.Relacion4;
 
 import java.util.Scanner;
 
@@ -17,6 +17,7 @@ public class Ejercicio2 {
         Scanner scanner1 = new Scanner(System.in);
         System.out.println("Indique un numero secreto para adivinar entre 1 y 10");
         numeroAdivinar=scanner1.nextInt();
+        scanner1.close();
 
         while (numeroAdivinar!=intentoUsuario) {
             System.out.println("Elige un numero entre 1 y 10");

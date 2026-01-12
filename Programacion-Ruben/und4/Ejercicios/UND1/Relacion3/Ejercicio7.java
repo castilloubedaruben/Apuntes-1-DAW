@@ -27,7 +27,7 @@
 //     console.log("Por favor introduce un numero válido.")
 // }
 
-package UND4.Ejercicios.UND1.Relacion3;
+package und4.Ejercicios.UND1.Relacion3;
 import java.util.Scanner;
 public class Ejercicio7 {
     public static void main(String[] args) {

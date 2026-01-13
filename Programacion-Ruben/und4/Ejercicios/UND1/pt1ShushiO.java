@@ -12,7 +12,7 @@ public class pt1ShushiO {
         final int GASTOARROZMAKI = 120, GASTOARROZNIGIRI = 50, GASTOARROZSASHIMI = 0;
         final double GASTOAGUAMAKI = 0.10, GASTOAGUANIGIRI = 0.05, GASTOAGUASASHIMI = 0.02;
         String tipoPlatoElegido = "";
-        int numeroUnidadesPedidas = 0, precioPedido = 0, totalArrozPedidoGastado = 0, arrozConsumidoTotal = 0 ;
+        int numeroUnidadesPedidas = 0, precioPedido = 0, totalArrozPedidoGastado = 0, arrozConsumidoTotal = 0;
         double totalAguaPedidoGastada = 0, aguaConsumidaTotal = 0;
 
         System.out.println("Indique el numero de pedidos");
@@ -26,6 +26,7 @@ public class pt1ShushiO {
         System.out.println("Indique cantidad litros de agua");
         while (totalAgua <= 0) {
             totalAgua = scanner1.nextInt();
+            scanner1.nextLine();
         }
 
         System.out.println("Numero de pedidos: " + totalPedidos + "\nStock de arroz(g): " + totalArroz
@@ -34,16 +35,19 @@ public class pt1ShushiO {
         for (int i = 0; i < totalPedidos && !stockSuperado; i++) {
             System.out.println("\nElige un plato: Maki, Nigiri, Sashimi");
             tipoPlatoElegido = scanner1.nextLine();
-            while (!tipoPlatoElegido.equals("maki") && !tipoPlatoElegido.equals("nigiri") && !tipoPlatoElegido.equals("sashimi")) {
+            while (!tipoPlatoElegido.equalsIgnoreCase("maki") && !tipoPlatoElegido.equals("nigiri")
+                    && !tipoPlatoElegido.equals("sashimi")) {
                 System.out.println("Introduce un tipo de plato correcto");
                 tipoPlatoElegido = scanner1.nextLine();
             }
 
             System.out.println("Elige numero de unidades");
             numeroUnidadesPedidas = scanner1.nextInt();
+            scanner1.nextLine();
             while (numeroUnidadesPedidas <= 0) {
                 System.out.println("Introduce un numero correcto");
                 numeroUnidadesPedidas = scanner1.nextInt();
+                scanner1.nextLine();
             }
             if (tipoPlatoElegido.equals("maki")) {
                 precioPedido = numeroUnidadesPedidas * PRECIOMAKI;
@@ -65,22 +69,24 @@ public class pt1ShushiO {
             arrozConsumidoTotal += totalArrozPedidoGastado;
             aguaConsumidaTotal += totalAguaPedidoGastada;
 
-            if (arrozConsumidoTotal>=totalArroz || aguaConsumidaTotal>=totalAgua) {
-                stockSuperado=true;
-                if (arrozConsumidoTotal>=totalArroz) {
+            if (arrozConsumidoTotal >= totalArroz || aguaConsumidaTotal >= totalAgua) {
+                stockSuperado = true;
+                if (arrozConsumidoTotal >= totalArroz) {
                     System.out.println("Stock de arroz superado! No se pueden servir mas pedidos");
-                }else {
+                } else {
                     System.out.println("Stock de agua superado! No se pueden servir mas pedidos");
                 }
             } else {
-                System.out.println("---- Pedido " + contador + " ----\nTipo de plato:" + tipoPlatoElegido + "\nUnidades:"
-                        + numeroUnidadesPedidas + "\nPlato:" + tipoPlatoElegido + " | Unidades: " + numeroUnidadesPedidas
+                System.out.println("---- Pedido " + contador + " ----\nTipo de plato:" + tipoPlatoElegido
+                        + "\nUnidades:"
+                        + numeroUnidadesPedidas + "\nPlato:" + tipoPlatoElegido + " | Unidades: "
+                        + numeroUnidadesPedidas
                         + " | Importe cobrado: " + precioPedido + "€" +
                         "\nArroz gastado: " + totalArrozPedidoGastado + "g | Acumulado: " + arrozConsumidoTotal + "g"
                         + "\nAgua gastada: " + totalAguaPedidoGastada + "L | Acumulado: " + aguaConsumidaTotal);
             }
         }
-        
+
         scanner1.close();
     }
 }

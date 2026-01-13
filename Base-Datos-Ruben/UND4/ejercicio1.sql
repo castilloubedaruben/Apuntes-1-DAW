@@ -61,26 +61,37 @@ use techcorp_db;
 
 -- 2. selecciona todos los datos de la tabla empleados.
 
+    select * from empleados;
 
 -- 3. recupera los datos de los empleados que trabajan en el departamento de it y cuya ciudad sea madrid.
 
+    select nombre from empleados where ciudad="Madrid" && departamento="it";
 
 -- 4. selecciona todos los empleados con un salario mayor a 3000 pero menor o igual a 6000.
 
+    select nombre from empleados where salario >=3000 && salario<=6000;
+    select nombre from empleados where salario between 3000 and 6000;
 
 -- 5. muestra una lista única de todas las ciudades en las que trabajan los empleados.
 
+    select distinct ciudad from empleados;
 
 -- 6. encuentra todos los empleados que trabajan en ventas o marketing y tienen un salario mayor a 5000.
 
+    select nombre,departamento from empleados where departamento="marketing" and salario >=5000;
 
 -- 7. recupera todos los empleados que no trabajan en el departamento de recursos humanos.
 
+    select nombre from empleados where departamento!="recursos humanos";
+
 -- 8. encuentra todos los clientes que residen en barcelona.
 
+    select nombre from clientes where ciudad="barcelona";
 
 -- 9. muestra una lista única de nombres de departamentos donde hay empleados menores de 30 años que ganan más de 4000.
 
+    select departamento from empleados where edad<30 and salario>4000;
 
 -- 10. recupera los empleados que tienen un salario mayor o igual a 3500 y están en el departamento desarrollo.
 
+    select nombre from empleados where salario >= 3500 and  departamento = "desarrollo";

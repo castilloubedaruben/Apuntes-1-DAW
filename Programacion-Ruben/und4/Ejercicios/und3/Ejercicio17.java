@@ -6,15 +6,20 @@ package und4.Ejercicios.und3;
 
 public class Ejercicio17 {
 
-    public static array revertirCadenaTexto(arrayNumerico) {
-        String textoRevertir;
-        for (String letra : textoRevertir) {
-            char letra = s.chart
+    public static String revertirCadenaTexto(String texto) {
+        String textoRevertido="";
+        texto=texto.trim(); // preguntar en clase porque no funciona
+
+        for (int i = texto.length()-1; i >= 0; i--) {
+            char letra=texto.charAt(i);
+            textoRevertido+=letra;
         }
-        return ;
+        return textoRevertido ;
     }
 
     public static void main(String[] args) {
-        
+        String cadenaInvertir="Hola Ruben";
+        System.out.println(revertirCadenaTexto(cadenaInvertir));
     }
 }
+

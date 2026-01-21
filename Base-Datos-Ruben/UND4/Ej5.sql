@@ -59,30 +59,29 @@ VALUES
 -- Ejercicios de Funciones de Texto:
 
 -- 1. Concatenar nombres y apellidos de los ciudadanos en un único campo "nombre_completo".
-
+select concat(nombre, " ", apellido) as nombre_completo from Ciudadano;
 -- 2. Obtener las primeras 3 letras de los nombres de los ciudadanos.
-
+select substring(nombre,1,3) from Ciudadano;
 -- 3. Calcular la longitud de los nombres de los ciudadanos.
-
+select char_length(nombre) as tamaño from Ciudadano;
 -- 4. Reemplazar la palabra "hospitales" por "clínicas" en las descripciones de actividades.
-
+select replace(descripcion,"hospitales","clinicas") from Actividad;
 -- 5. Eliminar espacios al inicio y al final de los nombres de los ministerios.
-
-
+select trim(nombre) as nombre_sin_espacios from Ministerio;
 -- Ejercicios de Funciones NuEXTRACTméricas:
 
 -- 6. Redondear el presupuesto de las actividades a millones.
-
+select round(presupuesto_asignado) from Actividad;
 -- 7. Calcular la diferencia entre los ingresos anuales de cada ciudadano y el promedio de ingresos.
-
+select nombre, ingresos_anuales -(select avg(ingresos_anuales) from Ciudadano) as diferencia_con_promedio from Ciudadano;
 -- 8. Obtener el entero más cercano hacia abajo y hacia arriba de los presupuestos de los ministerios.
-
+select floor(presupuesto), ceil(presupuesto) from Ministerio;
 -- 9. Generar un número aleatorio para asignar un identificador único temporal a cada actividad.
-
+select descripcion, FLOOR(1 + (RAND() * 10)) as numero_aleatorio from Actividad order by numero_aleatorio asc;
 -- Ejercicios de Funciones de Fecha y Hora:
 
 -- 10. Calcular la antigüedad de cada ministerio en años.
-
+select extract(year from now()) - (select extract(year from fecha_creacion)) as antigüedad from Ministerio;
 -- 11. Formatear las fechas de inicio y fin de las actividades en formato "DD-MM-YYYY".
 
 -- 12. Calcular cuántos días faltan para que termine cada actividad.
